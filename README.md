@@ -5,7 +5,7 @@ SortedTale is a Flask application that allows users to search for books and view
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/your-username/sortedTale.git
+git clone https://github.com/gabrielrosendo/sortedTale.git
 
 
 2. Install the required dependencies:
