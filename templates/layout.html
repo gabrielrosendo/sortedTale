@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <link href="/static/styles.css" rel="stylesheet">
-    <meta charset="utf-8"> 
-  </head>
-  <body>
-      <div class="box-area">
-        <header>
-          <h1>Sorted Tales</h1>
-            <h2><a href="/">Homepage</a></h2>
-          </div>
-        </header>
-        {% block banner %}{% endblock %}
+<head>
+  <link href="/static/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">Sorted Tales<span class="logo-green">.</span></h1>
+      <div class="search-container">
+        <form class="search-form" action="{{ url_for('found', bookname=bookname) }}" method="POST">
+          <input type="text" name="bookname" placeholder="Type the name of a book" />
+          <button type="submit">Search</button>
+        </form>
       </div>
-      
-    <main>
-            {% block main %}{% endblock %}
-    </main>
+      <nav class="navigation">
+        <ul class="nav-links">
+          <li><a href="/">Homepage</a></li>
+          <li><a href="#">Placeholder Link</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  </body>
-  
-</html>  
+  <main>
+    <div class="banner">
+      {% block banner %}{% endblock %}
+    </div>
+    <div class="content">
+      {% block main %}{% endblock %}
+    </div>
+  </main>
+</body>
+</html>

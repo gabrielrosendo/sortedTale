@@ -3,21 +3,15 @@
 Homepage
 {% endblock %}
 {% block main %}
-<h1 class="name-port">Welcome to Sorted Tales</h1>
-<h1>
-    <form action="{{ url_for('found', name='') }}" method="post">
-        <div>
-            <input type="text" name="bookName" placeholder="Type the name of a book">
-        </div>
-        <div>
-            <button style="background-color: #009879;" type="submit">Search</button>
-        </div>
-    </form>
-   <table class="content-table">
-      <thead>
-         <tr class="heading">
+
+
+
+   <table  class="content-table">
+      <thead >
+         <tr style="background-color: black;" class="heading">
             <th>Book Name</th>
             <th>Author</th>
+            <th>Genre</th>
          </tr>
       </thead>
       <tbody>
@@ -25,6 +19,7 @@ Homepage
          <tr>
             <td><a style = "color:#000000;"href="/found/{{ book.title }}">{{ book.title }}</a></td>
             <td>{{book.author_information[0]["name"]}}</td>
+            <td>{{book.genre}}</td>
          </tr>
          {% endfor %}
 

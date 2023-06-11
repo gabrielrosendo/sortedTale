@@ -10,7 +10,5 @@ collection = db["book_information"]
 # create a dictionary with the data you want to insert
 results = collection.find()
 bookshelf =[]
-# print results
 for book in results:
-    bookshelf.append(book)
-print(bookshelf)
+   bookshelf.append(book)
