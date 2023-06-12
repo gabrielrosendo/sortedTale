@@ -46,6 +46,10 @@ body, h1, table {
     cursor: pointer;
   }
   
+  form button:hover {
+    background-color: #00b39f;
+  }
+  
   /* Table styles */
   .content-table {
     width: 100%;
