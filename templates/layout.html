@@ -7,15 +7,15 @@
 <body>
   <header class="header">
     <div class="header-container">
-      <h1 class="logo">Sorted Tales<span class="logo-green">.</span></h1>
+      <a href="/"><h1 class="logo">Sorted Tales<span class="logo-green">.</span></h1></a>
       <div class="search-container">
-        <form class="search-form" action="{{ url_for('found', bookname=bookname) }}" method="POST">
+        <form class="search-form" action="{{ url_for('found', bookshelf=bookname) }}" method="POST">
           <input type="text" name="bookname" placeholder="Search a book" />
           <label for="book-search" style="color:white;">by:</label> 
-          <select name="book-search" id="book-search"> 
-          <option value="author">Author's name</option> 
-          <option value="name">Book's name</option> 
-          <option value="genre">Genre</option> 
+          <select name="searchby" id="book-search">
+            <option value="author">Author's name</option>
+            <option value="title" selected>Book's name</option>
+            <option value="genre">Genre</option>
           </select>
           <button type="submit">Search</button>
         </form>
