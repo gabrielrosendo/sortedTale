@@ -1,7 +1,8 @@
 import utils
+import re
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 bookshelf = utils.bookshelf
 
@@ -18,8 +19,12 @@ def found(bookname):
     if request.method == 'POST' or bookname:
         search_term = str(bookname or request.form.get("bookname")).strip()
         search_option = request.form.get("searchby", "title") 
-        print(search_option)
         bookshelf_results = collection.find({search_option: search_term})
+        # Create a regular expression pattern to match the search term as a substring
+        regex_pattern = re.compile('.*{}.*'.format(re.escape(search_term)), re.IGNORECASE)
+        # Use the regular expression pattern in the MongoDB query
+        bookshelf_results = collection.find({search_option: regex_pattern})
+
         if bookshelf_results:
             return render_template('found.html', bookshelf=bookshelf_results)
         else:

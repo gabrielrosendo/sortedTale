@@ -17,6 +17,7 @@
                         <p>Year Published: {{ book.year_published }}</p>
                         <p>ISBN: {{ book.ISBN }}</p>
                         <p>Cost: {{ book.cost }}</p>
+                        <p>Units available: {{book.units_available}}</p>
                         <h3>Author Information</h3>
                         {% for author in book.author_information %}
                             <p>Name: {{ author.name }}</p>
