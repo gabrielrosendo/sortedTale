@@ -135,4 +135,32 @@ body, h1, table {
     background-color: #ffffff;
   }
   
-  
+/* CSS for genre buttons */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #009879;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:hover a {
+  text-decoration: none;
+}
+
+.button-container button {
+  margin-bottom: 10px; 
+}
