@@ -1,4 +1,4 @@
-# Project README: Flask-based Bookstore Web Application
+# Flask-based Bookstore Web Application
 
 ![#009879](https://github.com/gabrielrosendo/sortedTale/assets/71938938/5cc194b8-bfa0-4bc5-a4a7-be5bbd6710d8)
 
